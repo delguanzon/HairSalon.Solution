@@ -21,13 +21,16 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
     List<Client> model = _db.Clients.ToList();
-    ViewBag.PageTitle = "View All Stylist";
+    List<Stylist> stylists = _db.Stylists.ToList();
+    ViewBag.Stylists = stylists.Count;
     return View(model);
     }
 
     public ActionResult Create(int id)
     {
-      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "FirstName", id);      
+      //ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "FirstName", id);
+      ViewBag.Stylists = new SelectList(_db.Stylists, "StylistId", "FirstName", id);
+      ViewBag.StylistId = id;
       return View();
     }
 

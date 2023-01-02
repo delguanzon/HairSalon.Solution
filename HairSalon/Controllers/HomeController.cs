@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HairSalon.Controllers
@@ -5,6 +8,7 @@ namespace HairSalon.Controllers
     public class HomeController : Controller
     {
 
+            
       [HttpGet("/")]
       public ActionResult Index()
       {

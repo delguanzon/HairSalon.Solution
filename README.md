@@ -12,6 +12,7 @@
 * ASP.Net MVC
 * Razor
 * MySql 6
+* MySql Workbench
 
 ## Description
 
@@ -24,13 +25,43 @@ As the salon owner, I need to be able to select a stylist, see their details, an
 As the salon owner, I need to add new stylists to our system when they are hired.
 As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
 
+
 ## Setup/Installation Requirements
 
+
+### Install Database Tools
+* Download and install MySQL Community Server and MySQL Workbench using the following link: (https://downloads.mysql.com/archives/get/p/25/file/mysql-installer-web-community-8.0.19.0.msi)
+
+### Database Import
+
 * Clone this repository on your desktop
+* Open MySQL WorkBench, Look for the Navigator Panel and then click on the Administration Tab.
+* From the Administration Tab, click on Data Import/Restore under the Management Section.
+* A data import tab would appear, choose Import from Self-Contained File under Import Options.
+* Navigate to the top directory of the solution folder and double click on yodel_guanzon.sql file.
+* Click on Start Import to create the needed Database Schema and tables in your server.
+
+### Database Connection Setup
+* Using a text editor, create a file. Paste the following code, replacing the USERNAME, PASSWORD with your own information. Make sure to also remove the enclosing braces.
+
+```
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=yodel_guanzon;uid=[USERNAME];pwd=[PASSWORD];",
+      "TestConnection": "Server=localhost;Port=3306;database=yodel_guanzon;uid=[USERNAME];pwd=[PASSWORD];"
+      
+  }
+}
+```
+* Save the file as ```appsettings.json``` under the project directory located at ../HairSalon.Solution/HairSalon.
+
+### Running the project
+
 * Navigate to the main project located in ../HairSalon.Solution/HairSalon using bash or cmd
 * Use ``` dotnet restore ``` to install/restore dependencies.
 * For Building, use ```dotnet build```
-* For running the console application, use ```dotnet run```
+* For running the console application with a watcher, use ```dotnet watcher run```
+* After running the project, you can also open the webapp using your browser manually using the following url (https://localhost:5001/) or (http://localhost:5000/)
 
 ## Known Bugs
 
