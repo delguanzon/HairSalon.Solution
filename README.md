@@ -1,8 +1,8 @@
-#  Pierre's Bake Shop
+#  Eau Claire's Salon
 
 #### By Yodel Guanzon <yodelguanzon@gmail.com>
 
-#### This is an independent project to test our skills in Basic Web Application using ASP .Net Core MVC.
+#### This is an independent project to test our skills in Web Application with a Database using ASP .Net Core MVC.
 
 ## Technologies Used
 
@@ -27,7 +27,7 @@ As the salon owner, I need to be able to add new clients to a specific stylist. 
 ## Setup/Installation Requirements
 
 * Clone this repository on your desktop
-* Navigate to the main project located in ../BakerySeller.Solution/BakerySeller using bash or cmd
+* Navigate to the main project located in ../HairSalon.Solution/HairSalon using bash or cmd
 * Use ``` dotnet restore ``` to install/restore dependencies.
 * For Building, use ```dotnet build```
 * For running the console application, use ```dotnet run```
@@ -61,5 +61,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) 12/16/2022 Yodel Guanzon
+Copyright (c) 12/23/2022 Yodel Guanzon
 
