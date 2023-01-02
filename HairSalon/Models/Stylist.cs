@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace HairSalon.Models
@@ -9,7 +10,7 @@ namespace HairSalon.Models
         public string LastName { get; set; }
         public string ContactNumber { get; set; }
         public string Status { get; set; }
-        public string DateCreated { get; set; }
+        public DateTime DateCreated { get; }
         public List<Client> Clients { get; set; }
     }
 }
