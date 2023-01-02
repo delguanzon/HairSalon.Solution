@@ -2,20 +2,18 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.Stylist
+@model HairSalon.Models.Client
 
 <h4> Add a New Task</h4>
 @using (Html.BeginForm()) 
 {
     @Html.LabelFor(model => model.FirstName)
     @Html.TextBoxFor(model => model.FirstName)
-    @Html.LabelFor(model => model.MiddleName)
-    @Html.TextBoxFor(model => model.MiddleName)
     @Html.LabelFor(model => model.LastName)
     @Html.TextBoxFor(model => model.LastName)
     @Html.LabelFor(model => model.ContactNumber)
     @Html.TextBoxFor(model => model.ContactNumber)
-    <input type="submit" value="Add Stylist" />
+    <input type="submit" value="Add Client" />
 }
 
 <p>@Html.ActionLink("Show all Items", "Index")</p>
