@@ -10,6 +10,6 @@ namespace HairSalon.Models
         public string ContactNumber { get; set; }
         public string Status { get; set; }
         public string DateCreated { get; set; }
-        public List<Client> Client { get; set; }
+        public List<Client> Clients { get; set; }
     }
 }

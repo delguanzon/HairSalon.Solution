@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 
+@using HairSalon.Models
 @model HairSalon.Models.Stylist
 
 <h2>Stylist Details</h2>
@@ -19,6 +20,6 @@
 }
 </ul>
   
-<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</p>
-<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ItemId })</p>
+<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.StylistId})</p>
+<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.StylistId})</p>
 <p> @Html.ActionLink("Back to List", "Index")</p>

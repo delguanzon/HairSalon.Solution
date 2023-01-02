@@ -5,7 +5,7 @@ namespace HairSalon.Controllers
     public class ClientController : Controller
     {
 
-      [HttpGet("/")]
+      [HttpGet("/clients")]
       public ActionResult Index()
       {
         return View();
