@@ -4,7 +4,7 @@
 
 @model HairSalon.Models.Client
 
-<h4> Add a New Task</h4>
+<h4> Add a New Client</h4>
 @using (Html.BeginForm()) 
 {
     @Html.LabelFor(model => model.FirstName)
@@ -13,7 +13,10 @@
     @Html.TextBoxFor(model => model.LastName)
     @Html.LabelFor(model => model.ContactNumber)
     @Html.TextBoxFor(model => model.ContactNumber)
+    @Html.DropDownList("Stylists")
+    @Html.LabelFor(model => model.StylistId)
+    @Html.HiddenFor(model => model.StylistId, new { @value = ViewBag.StylistId })
     <input type="submit" value="Add Client" />
 }
 
-<p>@Html.ActionLink("Show all Items", "Index")</p>
+<p>@Html.ActionLink("Show all Clients", "Index")</p>

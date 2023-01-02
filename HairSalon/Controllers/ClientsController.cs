@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace HairSalon.Controllers
 {
@@ -24,8 +25,10 @@ namespace HairSalon.Controllers
     return View(model);
     }
 
-    public ActionResult Create()
+    public ActionResult Create(int id)
     {
+      ViewBag.Stylists = new SelectList(_db.Stylists, "StylistId", "FirstName", id);
+      ViewBag.StylistId = id;
       return View();
     }
 
