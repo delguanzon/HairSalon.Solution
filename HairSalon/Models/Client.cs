@@ -1,6 +1,6 @@
 namespace HairSalon.Models
 {
-  public class Clients
+  public class Client
   {
     // properties, constructors, methods, etc. go here
     public int ClientId { get; set; }
@@ -10,7 +10,7 @@ namespace HairSalon.Models
     public string Status { get; set; }
     public string DateCreated{ get; set; }
     public int StylistId { get; set; }
-    public Stylists Stylist { get; set; }
+    public Stylist Stylist { get; set; }
 
   }
 }

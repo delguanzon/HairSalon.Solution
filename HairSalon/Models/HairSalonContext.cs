@@ -13,16 +13,16 @@ namespace HairSalon.Models
     // The "ProjectNameContext" class inherits from the "DbContext" class provided by Entity Framework Core.
     // The "DbContext" class provides a "DbSet" property, which we will use to communicate with our MySQL database.
 
-e
-    public class HaiorSalonContext : DbContext
+
+    public class HairSalonContext : DbContext
     {
-        public HaiorSalonContext (DbContextOptions<HaiorSalonContext> options)
+        public HairSalonContext (DbContextOptions<HairSalonContext> options)
             : base(options)
         {
         }
 
         //Database tables go here
-        public DbSet<HairSalon.Models.Clients> Clients { get; set; }
-        public DbSet<HairSalon.Models.Stylists> Stylists { get; set; }
+        public DbSet<HairSalon.Models.Client> Clients { get; set; }
+        public DbSet<HairSalon.Models.Stylist> Stylists { get; set; }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace HairSalon.Models
 {
-    public class Stylists
+    public class Stylist
     {
         public int StylistId { get; set; }
         public string FirstName { get; set; }
@@ -10,6 +10,6 @@ namespace HairSalon.Models
         public string ContactNumber { get; set; }
         public string Status { get; set; }
         public string DateCreated { get; set; }
-        public List<Clients> Clients { get; set; }
+        public List<Client> Client { get; set; }
     }
 }
