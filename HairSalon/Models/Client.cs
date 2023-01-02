@@ -10,7 +10,6 @@ namespace HairSalon.Models
     public string LastName { get; set; }
     public string ContactNumber { get; set; }
     public string Status { get; set; }
-    public DateTime DateCreated{ get; set; }
     public int StylistId { get; set; }
     public Stylist Stylist { get; set; }
 

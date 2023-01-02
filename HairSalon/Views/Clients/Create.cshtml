@@ -13,9 +13,7 @@
     @Html.TextBoxFor(model => model.LastName)
     @Html.LabelFor(model => model.ContactNumber)
     @Html.TextBoxFor(model => model.ContactNumber)
-    @Html.DropDownList("Stylists")
-    @Html.LabelFor(model => model.StylistId)
-    @Html.HiddenFor(model => model.StylistId, new { @value = ViewBag.StylistId })
+    @Html.DropDownList("StylistId")
     <input type="submit" value="Add Client" />
 }
 
