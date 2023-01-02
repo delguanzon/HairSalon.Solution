@@ -13,8 +13,15 @@
     @Html.TextBoxFor(model => model.LastName)
     @Html.LabelFor(model => model.ContactNumber)
     @Html.TextBoxFor(model => model.ContactNumber)
-    @Html.DropDownList("Stylists", ViewBag.Stylist as SelectList, "Select a Stylist", new { @disabled = "disabled" })
-    <input type="hidden" name="StylistId" value="@ViewBag.StylistId" />
+
+    @if(ViewBag.StylistId != 0) {
+      @Html.DropDownList("Stylists", ViewBag.Stylist as SelectList, "Select a Stylist", new { @disabled = "disabled" })
+      <input type="hidden" name="StylistId" value="@ViewBag.StylistId" />
+    }
+    else if(ViewBag.StylistId == 0) {
+      @Html.DropDownList("Stylists")
+    }
+    
     <input type="submit" value="Add Client" />
 }
 

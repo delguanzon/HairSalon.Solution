@@ -20,7 +20,6 @@
 
 @if(ViewBag.Stylists == 0) {
   <p>No Available Stylists. @Html.ActionLink("Add a stylist", "Index", "Stylists") in order to Add New Clients</p>
-  <p>@Html.ActionLink("Back to Home", "Index", "Home")</p>
 }
 else {
   <p>@Html.ActionLink("Add new client", "Create")</p>
