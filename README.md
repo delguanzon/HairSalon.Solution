@@ -31,7 +31,6 @@ As the salon owner, I need to be able to add new clients to a specific stylist. 
 * Use ``` dotnet restore ``` to install/restore dependencies.
 * For Building, use ```dotnet build```
 * For running the console application, use ```dotnet run```
-* For Testing, navigate to ../BakerySeller.Solution/Bakery.Tests and use ```dotnet test```.
 
 ## Known Bugs
 
