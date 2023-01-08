@@ -40,6 +40,7 @@ As the salon owner, I need to be able to add new clients to a specific stylist. 
 * A data import tab would appear, choose Import from Self-Contained File under Import Options.
 * Navigate to the top directory of the solution folder and double click on yodel_guanzon.sql file.
 * Click on Start Import to create the needed Database Schema and tables in your server.
+* Double check if the schema was properly created and named ```yodel_guanzon``` by going to the navigation panel then under Schema tab. If not, rename the newly created schema to ```yodel_guanzon```.
 
 ### Database Connection Setup
 * Using a text editor, create a file. Paste the following code, replacing the USERNAME, PASSWORD with your own information. Make sure to also remove the enclosing braces.

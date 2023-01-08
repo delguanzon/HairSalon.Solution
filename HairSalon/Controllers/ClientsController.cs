@@ -30,7 +30,17 @@ namespace HairSalon.Controllers
     {
       //ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "FirstName", id);
       ViewBag.Stylists = new SelectList(_db.Stylists, "StylistId", "FirstName", id);
-      ViewBag.StylistId = id;
+
+      #nullable enable
+      Stylist? stylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      #nullable disable
+
+      if(stylist == null)
+      {
+        ViewBag.StylistId = 0;
+      }
+      else ViewBag.StylistId = id;
+      
       return View();
     }
 
