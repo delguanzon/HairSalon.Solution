@@ -26,6 +26,14 @@ namespace HairSalon.Controllers
     return View(model);
     }
 
+    [HttpGet("/clients/Create")]
+    public ActionResult Create()
+    {
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "FirstName");
+      return View();
+    }
+
+    [HttpGet("/clients/Create/{id}")]
     public ActionResult Create(int id)
     {
       //ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "FirstName", id);
